@@ -1,4 +1,3 @@
-/* Yttre wrapper för hela sidan */
 .wrapper {
   min-height: calc(100vh - 70px);
 
@@ -10,7 +9,6 @@
   gap: 24px;
 }
 
-/* Create Auction-knappen */
 .createBtn {
   display: inline-flex;
   align-items: center;

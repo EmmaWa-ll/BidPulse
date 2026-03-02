@@ -1,11 +1,9 @@
-/* Quiet luxury: airy, hairlines, subtle depth, gold only as accent */
-
 .page {
   min-height: 100vh;
   display: grid;
   place-items: center;
   padding: 40px 24px;
-  background: #f6f4ee; /* warm ivory */
+  background: #f6f4ee;
   color: #0f0f10;
   font-family:
     system-ui,

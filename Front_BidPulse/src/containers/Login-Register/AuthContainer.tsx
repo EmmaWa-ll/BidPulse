@@ -7,7 +7,7 @@ import RegisterForm from "../../components/RegisterForm/RegisterForm";
 const AuthContainer = () => {
   const navigate = useNavigate();
 
-  // Styr om vi visar login eller register
+  // Styr om vi visar login eller registerr
   const [isRegister, setIsRegister] = useState(false);
 
   const [name, setName] = useState("");
@@ -34,18 +34,16 @@ const AuthContainer = () => {
     }
     try {
       await registerUser(name, email, password);
-      // Rensa alla fält
       setName("");
       setEmail("");
       setPassword("");
       setError("");
-      setIsRegister(false); // visa login-formuläret
+      setIsRegister(false);
     } catch {
       setError("Something went wrong, try again");
     }
   }
 
-  // Visa register eller login beroende på isRegister
   if (isRegister) {
     return (
       <RegisterForm

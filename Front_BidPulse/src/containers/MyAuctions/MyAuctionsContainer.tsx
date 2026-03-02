@@ -20,7 +20,9 @@ const MyAuctionContainer = () => {
   return (
     <MyAuctionView
       auctions={auctions}
-      onSelect={(id) => navigate(`/auctions/${id}`)}
+      onSelect={(id: string) => {
+        navigate(`/auctions/${id}`);
+      }}
     />
   );
 };

@@ -13,7 +13,6 @@ const AuctionsContainer = () => {
     });
   }, []);
 
-  // Körs varje gång användaren skriver i sökfältet
   function handleSearch(textTheUserTyped: string) {
     if (textTheUserTyped) {
       // Användaren har skrivit något — sök
@@ -21,7 +20,7 @@ const AuctionsContainer = () => {
         setAuctions(results);
       });
     } else {
-      // Sökfältet är tomt — visa alla auktioner igen
+      // Sökfältet är tomtvisa alla auktioner igen
       getAllAuctions().then((allAuctions) => {
         setAuctions(allAuctions);
       });

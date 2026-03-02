@@ -1,26 +1,14 @@
-import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
 import AuctionList from "../AuctionList/AuctionList";
 import styles from "./MyAuctionView.module.css";
-import { getMyAuctions } from "../../services/AuctionService";
-import type { AuctionLists, User } from "../../types/Types";
+import type { AuctionLists } from "../../types/Types";
 
-const MyAuctionView = () => {
-  const [auctions, setAuctions] = useState<AuctionLists[]>([]);
+interface Props {
+  auctions: AuctionLists[];
+  onSelect: (id: string) => void;
+}
 
-  useEffect(() => {
-    // Hämta inloggad användare
-    const user: User | null = JSON.parse(
-      localStorage.getItem("user") || "null",
-    );
-    if (!user) return;
-
-    // Hämta användarens auktioner
-    getMyAuctions(user.userId).then((myAuctions) => {
-      setAuctions(myAuctions);
-    });
-  }, []);
-
+const MyAuctionView = ({ auctions, onSelect }: Props) => {
   return (
     <div className={styles.wrapper}>
       <NavLink to="/createauction" className={styles.createBtn}>
@@ -30,7 +18,7 @@ const MyAuctionView = () => {
       {auctions.length === 0 ? (
         <p>You have no auctions yet.</p>
       ) : (
-        <AuctionList auctions={auctions} />
+        <AuctionList auctions={auctions} onSelect={onSelect} />
       )}
     </div>
   );

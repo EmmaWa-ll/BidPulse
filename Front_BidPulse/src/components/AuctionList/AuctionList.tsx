@@ -4,6 +4,7 @@ import styles from "./AuctionList.module.css";
 
 interface Props {
   auctions: AuctionLists[];
+  onSelect?: (id: string) => void;
 }
 
 const AuctionList = ({ auctions }: Props) => {
