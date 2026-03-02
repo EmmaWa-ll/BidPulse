@@ -1,0 +1,147 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 24px;
+  background: #f6f4ee;
+  color: #0f0f10;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+.card {
+  width: min(620px, 100%);
+  background: #ffffff;
+  border: 1px solid rgba(15, 15, 16, 0.22);
+  border-radius: 18px;
+  padding: 56px 64px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  margin: 0 0 34px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(15, 15, 16, 0.82);
+}
+
+.fields {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.input {
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid rgba(15, 15, 16, 0.22);
+  border-radius: 12px;
+  background: #ffffff;
+  color: #0f0f10;
+  font-size: 14px;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.input::placeholder {
+  color: rgba(15, 15, 16, 0.45);
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(198, 161, 91, 0.95);
+  box-shadow: 0 0 0 5px rgba(198, 161, 91, 0.18);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.button {
+  height: 44px;
+  min-width: 130px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 15, 16, 0.85);
+  background: #0f0f10;
+  color: #f6f4ee;
+  font-weight: 750;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    box-shadow 140ms ease,
+    background 140ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.button:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 24px 16px;
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+    min-height: auto;
+    padding: 44px 18px;
+    border-radius: 18px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .title {
+    margin-bottom: 28px;
+    font-size: 22px;
+    letter-spacing: 0.32em;
+  }
+
+  .fields {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .input {
+    height: 48px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 260px;
+    height: 46px;
+  }
+}

@@ -1,0 +1,79 @@
+.card {
+  width: 320px;
+  height: 160px;
+  border: 1px solid rgba(15, 15, 16, 0.16);
+  border-radius: 18px;
+  background: #ffffff;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  overflow: hidden;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 140ms ease,
+    box-shadow 180ms ease,
+    border-color 140ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(198, 161, 91, 0.55);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.09);
+}
+.imageWrap {
+  width: 140px;
+  height: 160px;
+  background: #f3f0e8;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(198, 161, 91, 0.25),
+    rgba(15, 15, 16, 0.05)
+  );
+}
+
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 850;
+  color: rgba(15, 15, 16, 0.9);
+}
+
+.text {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(15, 15, 16, 0.72);
+}
+
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .imageWrap {
+    height: 100%;
+    width: 180px;
+  }
+}

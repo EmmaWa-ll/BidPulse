@@ -1,0 +1,19 @@
+.panel {
+  background: #f5efdc;
+  padding: 16px;
+  min-width: 260px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 12px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 6px;
+}

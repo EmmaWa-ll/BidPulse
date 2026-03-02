@@ -1,0 +1,79 @@
+.page {
+  min-height: calc(100vh - 70px);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page h1 {
+  margin-bottom: 24px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.imageBox {
+  background: #f6f4ee;
+  border-radius: 18px;
+  border: 1px dashed rgba(15, 15, 16, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: rgba(15, 15, 16, 0.4);
+  font-size: 14px;
+}
+
+.previewImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ändrat från cover till contain */
+  border-radius: 18px;
+}
+
+.form {
+  background: #f6f4ee;
+  padding: 24px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 999px;
+  border: 1px solid #0f0f10;
+  background: #f6f4ee;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .imageBox {
+    min-height: 200px;
+  }
+}
