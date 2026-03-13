@@ -39,12 +39,12 @@ builder.Services.AddScoped<IBidService, BidService>();
 var app = builder.Build();
 
 
-app.UseRouting();
 
 app.UseCors(options => options.AllowAnyOrigin()
                                 .AllowAnyHeader()
                                 .AllowAnyMethod());
 
+app.UseRouting();
 app.UseEndpoints(endpoints => endpoints.MapControllers());
 
 if (app.Environment.IsDevelopment())
