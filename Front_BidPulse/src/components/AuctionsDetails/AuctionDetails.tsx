@@ -27,7 +27,7 @@ const AuctionDetails = () => {
     });
   }, []);
 
-  if (!auction) return <p>Loading...</p>;
+  if (!auction) return <p></p>;
 
   const highestBid =
     bids.length > 0 ? Math.max(...bids.map((b) => b.bidAmount)) : 0;
@@ -80,7 +80,8 @@ const AuctionDetails = () => {
         <h2 className={styles.title}>{auction.title}</h2>
         <p className={styles.text}>{auction.description}</p>
         <p className={styles.text}>Seller: {auction.userName}</p>
-        <p className={styles.price}>{currentPrice} kr</p>
+        <p className={styles.price}>Current Price: {currentPrice} kr</p>
+        <p className={styles.startPrice}>StartPrice: {auction.startPrice}</p>
         <p className={styles.text}>
           Starts: {new Date(auction.startDate).toLocaleDateString("sv-SE")}
         </p>

@@ -1,10 +1,8 @@
 import { Routes, Route, Navigate } from "react-router";
 import AppLayout from "./AppLayout";
-
 import Auctions from "../Pages/Auctions";
 import MyAuctions from "../Pages/MyAuctions";
 import CreateAuction from "../Pages/CreateAuction";
-
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AuctionDetails from "../Pages/AuctionDetails";
@@ -15,7 +13,7 @@ import AuctionDetails from "../Pages/AuctionDetails";
 const Router = () => {
   return (
     <Routes>
-      {/* Start */}
+      {/* Startsid */}
       <Route path="/" element={<Navigate to="/auctions" replace />} />
 
       {/* utan header */}

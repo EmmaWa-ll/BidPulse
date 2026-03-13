@@ -15,7 +15,7 @@ const AuctionsContainer = () => {
 
   function handleSearch(textTheUserTyped: string) {
     if (textTheUserTyped) {
-      // Användaren har skrivit något — sök
+      // användaren har skrivit något — söök
       searchAuctions(textTheUserTyped).then((results) => {
         setAuctions(results);
       });

@@ -44,6 +44,14 @@
   border-top: 1px solid rgba(15, 15, 16, 0.08);
   padding-top: 10px;
 }
+.startPrice {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: rgba(16, 15, 15, 0.78);
+  border-bottom: 1px solid rgba(15, 15, 16, 0.08);
+  padding-top: 10p;
+}
 
 .back {
   display: inline-flex;
