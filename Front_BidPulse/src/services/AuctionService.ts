@@ -4,7 +4,7 @@ import type {
   CreateAuctionDTO,
 } from "../types/Types";
 
-const BASE_URL = "https://localhost:7147/api/auction";
+const BASE_URL = `${import.meta.env.VITE_API_URL}/api/auction`;
 
 //vis aöppna auktioner
 export const getAllAuctions = async (): Promise<AuctionLists[]> => {

@@ -1,6 +1,6 @@
 import type { Bid, CreateBidDTO } from "../types/Types";
 
-const BASE_URL = "https://localhost:7147/api/bid";
+const BASE_URL = `${import.meta.env.VITE_API_URL}/api/bid`;
 
 //Skickar get och retunerar lista bed Bid för en specifik auciton.
 export const getBidsForAuction = async (auctionId: number): Promise<Bid[]> => {
